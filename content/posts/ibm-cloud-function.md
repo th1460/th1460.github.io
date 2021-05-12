@@ -2,7 +2,7 @@
 author:
   name: Thiago Pires
 date: "2021-05-11"
-linktitle: IBM Cloud Functions - a simple R example
+linktitle: IBM Cloud Functions a simple R example
 series:
 - Cloud
 - R
