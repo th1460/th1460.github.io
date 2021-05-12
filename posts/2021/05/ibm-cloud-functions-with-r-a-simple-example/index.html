@@ -46,7 +46,7 @@
 <meta itemprop="description" content="IBM Cloud™ Functions service is an event-driven compute platform, also referred to as Serverless computing, or as Function as a Service (FaaS), that runs code in response to events or direct invocations.
  Configuration In order to run a function with another language, that is not supported by IBM Cloud Functions, you need indicate a exec file with an initial configuration. In the Cloud, the function will run on Docker container whose image is the openwhisk/dockerskeleton."><meta itemprop="datePublished" content="2021-05-11T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-05-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="411">
+<meta itemprop="wordCount" content="419">
 <meta itemprop="keywords" content="Cloud,R," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="IBM Cloud Functions with R - a simple example"/>
@@ -216,6 +216,7 @@ echo &quot;$@&quot; &gt; input.json # set input
 </code></pre><p>To deploy the functions you need to indicate the repository that is in Docker Hub <code>--docker th1460/raction</code></p>
 <pre><code>ibmcloud fn action create raction raction.zip --docker th1460/raction
 </code></pre><p>This approach could be interesting to reduce the time to build in the request of the function. In comparing the speed, this approach was faster than the first one.</p>
+<p>The scripts this post is found in <a href="https://github.com/th1460/r-actions-example">github.com/th1460/r-actions-example</a>.</p>
 <h2 id="references">References</h2>
 <ul>
 <li>Preparing apps in Docker images: <a href="https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-prep#prep_docker">https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-prep#prep_docker</a></li>
@@ -248,7 +249,7 @@ echo &quot;$@&quot; &gt; input.json # set input
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        411 Words
+        419 Words
       </p>
 
       <p>

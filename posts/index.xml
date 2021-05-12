@@ -81,6 +81,7 @@ echo &quot;$@&quot; &gt; input.json # set input
 </code></pre><p>To deploy the functions you need to indicate the repository that is in Docker Hub <code>--docker th1460/raction</code></p>
 <pre><code>ibmcloud fn action create raction raction.zip --docker th1460/raction
 </code></pre><p>This approach could be interesting to reduce the time to build in the request of the function. In comparing the speed, this approach was faster than the first one.</p>
+<p>The scripts this post is found in <a href="https://github.com/th1460/r-actions-example">github.com/th1460/r-actions-example</a>.</p>
 <h2 id="references">References</h2>
 <ul>
 <li>Preparing apps in Docker images: <a href="https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-prep#prep_docker">https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-prep#prep_docker</a></li>
