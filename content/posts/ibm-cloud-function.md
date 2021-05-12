@@ -16,7 +16,7 @@ type:
 weight: 10
 ---
 
->[IBM Cloud™ Functions](https://cloud.ibm.com/functions/) service is an event-driven compute platform, also referred to as Serverless computing, or as Function as a Service (FaaS), that runs code in response to events or direct invocations.
+>[IBM Cloud™ Functions](https://cloud.ibm.com/functions) service is an event-driven compute platform, also referred to as Serverless computing, or as Function as a Service (FaaS), that runs code in response to events or direct invocations.
 
 ## Configuration
 
