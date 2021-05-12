@@ -115,7 +115,7 @@ echo "$@" > input.json # set input
 ./script.R # run script
 ```
 
-To deploy the functions you need to indicate the repository that is in Docker Hub `--docker th1460/ractions`
+To deploy the functions you need to indicate the repository that is in Docker Hub `--docker th1460/raction`
 
 ```
 ibmcloud fn action create raction raction.zip --docker th1460/raction
