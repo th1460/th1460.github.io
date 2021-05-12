@@ -9,11 +9,11 @@
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/series/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>IBM Cloud Functions - a simple R example</title>
-      <link>/posts/2021/05/ibm-cloud-functions-a-simple-r-example/</link>
+      <title>IBM Cloud Functions with R - a simple example</title>
+      <link>/posts/2021/05/ibm-cloud-functions-with-r-a-simple-example/</link>
       <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2021/05/ibm-cloud-functions-a-simple-r-example/</guid>
+      <guid>/posts/2021/05/ibm-cloud-functions-with-r-a-simple-example/</guid>
       <description>IBM Cloud™ Functions service is an event-driven compute platform, also referred to as Serverless computing, or as Function as a Service (FaaS), that runs code in response to events or direct invocations.
  Configuration In order to run a function with another language, that is not supported by IBM Cloud Functions, you need indicate a exec file with an initial configuration. In the Cloud, the function will run on Docker container whose image is the openwhisk/dockerskeleton.</description>
     </item>
