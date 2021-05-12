@@ -2,14 +2,14 @@
 author:
   name: Thiago Pires
 date: "2021-05-11"
-linktitle: IBM Cloud Functions a simple R example
+linktitle: IBM Cloud Functions with R a simple example
 series:
 - Cloud
 - R
 tags:
 - Cloud
 - R
-title: IBM Cloud Functions - a simple R example
+title: IBM Cloud Functions with R - a simple example
 type:
 - post
 - posts
@@ -122,6 +122,8 @@ ibmcloud fn action create raction raction.zip --docker th1460/raction
 ```
 
 This approach could be interesting to reduce the time to build in the request of the function. In comparing the speed, this approach was faster than the first one.
+
+The scripts this post is found in [github.com/th1460/r-actions-example](https://github.com/th1460/r-actions-example).
 
 ## References
 
