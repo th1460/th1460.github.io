@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on th1460</title>
-    <link>/series/r/</link>
-    <description>Recent content in R on th1460</description>
+    <title>Rayshader on th1460</title>
+    <link>/tags/rayshader/</link>
+    <description>Recent content in Rayshader on th1460</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 07 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/series/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/rayshader/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mapa 3D com Rayshader</title>
       <link>/posts/2022/08/mapa-3d-com-rayshader/</link>
@@ -17,16 +17,6 @@
       <description>Aqui um exemplo de como construir um mapa 3D de uma parte do município do Rio de Janeiro com a linguagem R e a biblioteca rayshader.
 Dados de elevação Primeiro é necessário obter as imagens de elevação. Nesta página opentopography.org é possível conseguir estes dados. Selecione uma área e escolha uma base com as imagens disponíveis aqui no portal.opentopography.org/datasets e salve em um formato .tif.
 Salve os valores utilizados de latitude e longitude na seleção dos limites da região do mapa na variável bbox.</description>
-    </item>
-    
-    <item>
-      <title>IBM Cloud Functions with R - a simple example</title>
-      <link>/posts/2021/05/ibm-cloud-functions-with-r-a-simple-example/</link>
-      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2021/05/ibm-cloud-functions-with-r-a-simple-example/</guid>
-      <description>IBM Cloud™ Functions service is an event-driven compute platform, also referred to as Serverless computing, or as Function as a Service (FaaS), that runs code in response to events or direct invocations.
- Configuration In order to run a function with another language, that is not supported by IBM Cloud Functions, you need indicate a exec file with an initial configuration. In the Cloud, the function will run on Docker container whose image is the openwhisk/dockerskeleton.</description>
     </item>
     
   </channel>
