@@ -6,8 +6,80 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 07 Aug 2022 00:00:00 +0000</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Mapa 3D com Rayshader</title>
+            <link>/posts/2022/08/mapa-3d-com-rayshader/</link>
+            <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+            
+            <guid>/posts/2022/08/mapa-3d-com-rayshader/</guid>
+            <description>Aqui um exemplo de como construir um mapa 3D de uma parte do município do Rio de Janeiro com a linguagem R e a biblioteca rayshader.
+Dados de elevação Primeiro é necessário obter as imagens de elevação. Nesta página opentopography.org é possível conseguir estes dados. Selecione uma área e escolha uma base com as imagens disponíveis aqui no portal.opentopography.org/datasets e salve em um formato .tif.
+Salve os valores utilizados de latitude e longitude na seleção dos limites da região do mapa na variável bbox.</description>
+            <content type="html"><![CDATA[<p>Aqui um exemplo de como construir um mapa 3D de uma parte do município do Rio de Janeiro com a linguagem R e a biblioteca <a href="https://www.rayshader.com/"><code>rayshader</code></a>.</p>
+<h2 id="dados-de-elevação">Dados de elevação</h2>
+<p>Primeiro é necessário obter as imagens de elevação. Nesta página <a href="https://opentopography.org">opentopography.org</a> é possível conseguir estes dados. Selecione uma área e escolha uma base com as imagens disponíveis aqui no <a href="https://portal.opentopography.org/datasets">portal.opentopography.org/datasets</a> e salve em um formato <code>.tif</code>.</p>
+<p>Salve os valores utilizados de latitude e longitude na seleção dos limites da região do mapa na variável <code>bbox</code>.</p>
+<pre><code>bbox &lt;- list(
+    p2 = list(long = -43.2328217452992, lat = -22.99560928307949),
+    p1 = list(long = -43.133008448808454, lat = -22.930329210944166)
+)
+</code></pre><p>Carregue a imagem com as informações de elevação em <code>.tif</code> utilizando a função
+<code>raster::raster</code>.</p>
+<pre><code># Carregar o arquivo tif
+elev_file &lt;- &quot;data/rj.tif&quot;
+elev_img &lt;- raster::raster(elev_file)
+elev_matrix &lt;- 
+    matrix(raster::extract(elev_img, 
+                           raster::extent(elev_img), 
+                           buffer = 1000), 
+           nrow = ncol(elev_img), 
+           ncol = nrow(elev_img)
+    )
+    
+    
+# Detectar camanda de água
+watermap &lt;- rayshader::detect_water(elev_matrix)
+</code></pre><h2 id="adicionando-a-textura">Adicionando a textura</h2>
+<p>A textura do mapa foi obtida através desta rotina. As funções <code>define_image_size</code> e <code>get_arcgis_map_image</code> são deste <a href="https://github.com/wcmbishop/rayshader-demo/tree/master/R">repositório</a>.</p>
+<pre><code>source(&quot;src/define_image_size.R&quot;)
+source(&quot;src/get_arcgis_map_image.R&quot;)
+
+image_size &lt;- define_image_size(bbox, major_dim = 600)
+
+overlay_file &lt;- &quot;../data/rj_overlay.png&quot;
+
+get_arcgis_map_image(bbox, map_type = &quot;World_Imagery&quot;, file = overlay_file,
+                     width = image_size$width, height = image_size$height, 
+                     sr_bbox = 4326)
+
+overlay_img &lt;- png::readPNG(overlay_file)
+</code></pre><h2 id="renderizando-o-mapa-em-3d">Renderizando o mapa em 3D</h2>
+<p>A última etapa é a renderização do mapa</p>
+<pre><code># Renderizando
+zscale &lt;- 30
+rgl::clear3d()
+elev_matrix |&gt; 
+    rayshader::sphere_shade(texture = &quot;imhof4&quot;) |&gt; 
+    rayshader::add_water(watermap, color = &quot;imhof4&quot;) |&gt; 
+    rayshader::add_overlay(overlay_img, alphalayer = .8) |&gt; 
+    plot_3d(elev_matrix, zscale = zscale, windowsize = c(1500, 1200),
+            water = TRUE, soliddepth = -max(elev_matrix)/zscale, wateralpha = 1,
+            theta = 25, phi = 30, zoom = 0.65, fov = 60)
+
+# Salvando o resultado final
+rayshader::render_snapshot(&quot;data/rj-3d.png&quot;)
+</code></pre><p>Após a renderização foram adicionados os rótulos no <a href="https://www.gimp.org">GIMP</a>.</p>
+<p><img src="https://raw.githubusercontent.com/th1460/linguagem-r/main/data/rj-3d-editado.png" alt=""></p>
+<h2 id="referências">Referências</h2>
+<ul>
+<li>A Rayshader base tutorial + Bonus : Hawaii <a href="https://www.davidsolito.com/post/a-rayshader-base-tutortial-bonus-hawaii/">https://www.davidsolito.com/post/a-rayshader-base-tutortial-bonus-hawaii/</a></li>
+<li>I can rayshade, and so can you <a href="https://wcmbishop.github.io/rayshader-demo/">https://wcmbishop.github.io/rayshader-demo/</a></li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>IBM Cloud Functions with R - a simple example</title>

@@ -1,15 +1,16 @@
 ---
+title: "IBM Cloud Functions with R - a simple example"
 author:
   name: Thiago Pires
-date: "2021-05-11"
-linktitle: IBM Cloud Functions with R a simple example
+date: '2021-05-11'
 series:
 - Cloud
 - R
 tags:
 - Cloud
+- IBM
 - R
-title: IBM Cloud Functions with R - a simple example
+linktitle: IBM Cloud Functions with R a simple example
 type:
 - post
 - posts

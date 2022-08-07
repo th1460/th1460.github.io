@@ -67,7 +67,7 @@ params:
   logo:
     logoHomeLink: /
     logoMark: '>'
-    logoText: $ cd /home/
+    logoText: $ cd /home
   social:
     - name: twitter
       url: https://twitter.com/th14600

@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mapa 3D com Rayshader</title>
+      <link>/posts/2022/08/mapa-3d-com-rayshader/</link>
+      <pubDate>Sun, 07 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2022/08/mapa-3d-com-rayshader/</guid>
+      <description>Aqui um exemplo de como construir um mapa 3D de uma parte do município do Rio de Janeiro com a linguagem R e a biblioteca rayshader.
+Dados de elevação Primeiro é necessário obter as imagens de elevação. Nesta página opentopography.org é possível conseguir estes dados. Selecione uma área e escolha uma base com as imagens disponíveis aqui no portal.opentopography.org/datasets e salve em um formato .tif.
+Salve os valores utilizados de latitude e longitude na seleção dos limites da região do mapa na variável bbox.</description>
+    </item>
+    
     <item>
       <title>IBM Cloud Functions with R - a simple example</title>
       <link>/posts/2021/05/ibm-cloud-functions-with-r-a-simple-example/</link>
